@@ -31,8 +31,8 @@ let userChoice = userPlay(`Choose Rock, Paper, or Scissors`);
 
 console.log(userChoice);
 
-// if computerPlay === userPlay, ask to choose again
-//     have computerPlay run again here as well 
+// if computer choice === userchoice, ask to choose again
+//     have computer run again here as well 
 
 if (computerChoice === userChoice) {
     computerChoice = computerPlay();
@@ -40,6 +40,9 @@ if (computerChoice === userChoice) {
 
     userChoice = userPlay(`You've both selected the same outcome! Please choose again!`)
     console.log(userChoice)
+
+// let user know if they lose and to try again
+
     } else if   (computerChoice === `rock` && userChoice === `scissors` || 
                 computerChoice === `scissors` && userChoice === `paper` ||
                 computerChoice === `paper` && userChoice === `rock`
@@ -50,6 +53,8 @@ if (computerChoice === userChoice) {
 
                         userChoice = userPlay(`You lost that round, try again!`)
                         console.log(userChoice)
+
+// let user know if they win and to keep playing
     } else if   (userChoice === `rock` && computerChoice === `scissors` || 
                 userChoice === `scissors` && computerChoice === `paper` ||
                 userChoice === `paper` && computerChoice === `rock`
@@ -60,6 +65,9 @@ if (computerChoice === userChoice) {
 
                     userChoice = userPlay(`You won that round, go again!`)
                     console.log(userChoice)
+
+// if user doesn't choose rock, paper, or scissors, let them know and to play again
+
      } else {
             computerChoice = computerPlay();
             console.log(computerChoice);
@@ -80,7 +88,7 @@ if (computerChoice === userChoice) {
 
 
 
-
+// down here is just the code repeating several times
 
 
 
