@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+
+// create function called computerPlay
+// computer will randomly choose rock, paper or scissors
+function computerPlay() {
+    let computerOptions = ["rock", "paper", "scissors"];
+    return computerOptions[Math.floor(Math.random() * computerOptions.length)];
+}
+
+let computerChoice = computerPlay();
+
+console.log(computerChoice);
+// create variable UserPlay to = prompt which allows user to choose rock, paper, or scissors
+
+function userPlay(text) {
+return prompt(text).toLowerCase();
+}
+
+let userChoice = userPlay(`Choose Rock, Paper, or Scissors`);
+
+console.log(userChoice);
+
+// if computerPlay === userPlay, ask to choose again
+//     have computerPlay run again here as well 
+
+if (computerChoice === userChoice) {
+    computerChoice = computerPlay();
+    console.log(computerChoice);
+
+    userChoice = userPlay(`You've both selected the same outcome! Please choose again!`)
+    console.log(userChoice)
+    } else if   (computerChoice === `rock` && userChoice === `scissors` || 
+                computerChoice === `scissors` && userChoice === `paper` ||
+                computerChoice === `paper` && userChoice === `rock`
+                )
+                    {
+                        computerChoice = computerPlay();
+                        console.log(computerChoice);
+
+                        userChoice = userPlay(`You lost that round, try again!`)
+                        console.log(userChoice)
+    } else if   (userChoice === `rock` && computerChoice === `scissors` || 
+                userChoice === `scissors` && computerChoice === `paper` ||
+                userChoice === `paper` && computerChoice === `rock`
+            )
+                {
+                    computerChoice = computerPlay();
+                    console.log(computerChoice);
+
+                    userChoice = userPlay(`You won that round, go again!`)
+                    console.log(userChoice)
+     } else {
+            computerChoice = computerPlay();
+            console.log(computerChoice);
+
+            userChoice = userPlay(`Check your spelling! Try again :)`)
+            console.log(userChoice)
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     if (computerChoice === userChoice) {
+    computerChoice = computerPlay();
+    console.log(computerChoice);
+
+    userChoice = userPlay(`You've both selected the same outcome! Please choose again!`)
+    console.log(userChoice)
+    } else if   (computerChoice === `rock` && userChoice === `scissors` || 
+                computerChoice === `scissors` && userChoice === `paper` ||
+                computerChoice === `paper` && userChoice === `rock`
+                )
+                    {
+                        computerChoice = computerPlay();
+                        console.log(computerChoice);
+
+                        userChoice = userPlay(`You lost that round, try again!`)
+                        console.log(userChoice)
+    } else if   (userChoice === `rock` && computerChoice === `scissors` || 
+                userChoice === `scissors` && computerChoice === `paper` ||
+                userChoice === `paper` && computerChoice === `rock`
+            )
+                {
+                    computerChoice = computerPlay();
+                    console.log(computerChoice);
+
+                    userChoice = userPlay(`You won that round, go again!`)
+                    console.log(userChoice)
+     } else {
+            computerChoice = computerPlay();
+            console.log(computerChoice);
+
+            userChoice = userPlay(`Check your spelling! Try again :)`)
+            console.log(userChoice)
+     }if (computerChoice === userChoice) {
+    computerChoice = computerPlay();
+    console.log(computerChoice);
+
+    userChoice = userPlay(`You've both selected the same outcome! Please choose again!`)
+    console.log(userChoice)
+    } else if   (computerChoice === `rock` && userChoice === `scissors` || 
+                computerChoice === `scissors` && userChoice === `paper` ||
+                computerChoice === `paper` && userChoice === `rock`
+                )
+                    {
+                        computerChoice = computerPlay();
+                        console.log(computerChoice);
+
+                        userChoice = userPlay(`You lost that round, try again!`)
+                        console.log(userChoice)
+    } else if   (userChoice === `rock` && computerChoice === `scissors` || 
+                userChoice === `scissors` && computerChoice === `paper` ||
+                userChoice === `paper` && computerChoice === `rock`
+            )
+                {
+                    computerChoice = computerPlay();
+                    console.log(computerChoice);
+
+                    userChoice = userPlay(`You won that round, go again!`)
+                    console.log(userChoice)
+     } else {
+            computerChoice = computerPlay();
+            console.log(computerChoice);
+
+            userChoice = userPlay(`Check your spelling! Try again :)`)
+            console.log(userChoice)
+     }if (computerChoice === userChoice) {
+    computerChoice = computerPlay();
+    console.log(computerChoice);
+
+    userChoice = userPlay(`You've both selected the same outcome! Please choose again!`)
+    console.log(userChoice)
+    } else if   (computerChoice === `rock` && userChoice === `scissors` || 
+                computerChoice === `scissors` && userChoice === `paper` ||
+                computerChoice === `paper` && userChoice === `rock`
+                )
+                    {
+                        computerChoice = computerPlay();
+                        console.log(computerChoice);
+
+                        userChoice = userPlay(`You lost that round, try again!`)
+                        console.log(userChoice)
+    } else if   (userChoice === `rock` && computerChoice === `scissors` || 
+                userChoice === `scissors` && computerChoice === `paper` ||
+                userChoice === `paper` && computerChoice === `rock`
+            )
+                {
+                    computerChoice = computerPlay();
+                    console.log(computerChoice);
+
+                    userChoice = userPlay(`You won that round, go again!`)
+                    console.log(userChoice)
+     } else {
+            computerChoice = computerPlay();
+            console.log(computerChoice);
+
+            userChoice = userPlay(`Check your spelling! Try again :)`)
+            console.log(userChoice)
+     }if (computerChoice === userChoice) {
+    computerChoice = computerPlay();
+    console.log(computerChoice);
+
+    userChoice = userPlay(`You've both selected the same outcome! Please choose again!`)
+    console.log(userChoice)
+    } else if   (computerChoice === `rock` && userChoice === `scissors` || 
+                computerChoice === `scissors` && userChoice === `paper` ||
+                computerChoice === `paper` && userChoice === `rock`
+                )
+                    {
+                        computerChoice = computerPlay();
+                        console.log(computerChoice);
+
+                        userChoice = userPlay(`You lost that round, try again!`)
+                        console.log(userChoice)
+    } else if   (userChoice === `rock` && computerChoice === `scissors` || 
+                userChoice === `scissors` && computerChoice === `paper` ||
+                userChoice === `paper` && computerChoice === `rock`
+            )
+                {
+                    computerChoice = computerPlay();
+                    console.log(computerChoice);
+
+                    userChoice = userPlay(`You won that round, go again!`)
+                    console.log(userChoice)
+     } else {
+            computerChoice = computerPlay();
+            console.log(computerChoice);
+
+            userChoice = userPlay(`Check your spelling! Try again :)`)
+            console.log(userChoice)
+     }
+
+// if computer plays rock and users plays scissors, 
+// OR
+//     computer plays scissors and user plays paper
+// OR 
+//     computer plays paper and user plays rock
+        
+//         print `you lose` 
+
+// if user plays rock and computer plays scissors, 
+// OR
+//     user plays scissors and computer plays paper
+// OR 
+//     user plays paper and computer plays rock
+
+//             print 'you win'
+
+
+// else print `error`
+
+
+</script>
+
+
+</body>
+</html>
