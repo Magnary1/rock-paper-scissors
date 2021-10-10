@@ -14,10 +14,6 @@ h1 {
     padding: 20px;
 }
 
-.btn {
-    width: 80px;
-    height: 30px;
-}
 
 .main-container {
     display: flex;
@@ -28,7 +24,9 @@ h1 {
 .right-side {
     display: flex;
     flex-direction: column;
-    border: 2px solid green;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.12); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.12);
+    border-radius: 20%;
     padding: 36px;
     width: 400px;
 }
@@ -39,6 +37,7 @@ h1 {
     display: flex;
     list-style: none;
     justify-content: space-around;
+    gap:16px
 }
 
 .player-names {
@@ -51,11 +50,56 @@ h1 {
     padding-top: 40px;
 }
 
+.rockIMG,
+.paperIMG,
+.scissorsIMG,
+.resetIMG {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.822);
+    width: 120px;
+    height: 100px;
+    border-radius:20%;
+    border: none;
+    /* messing around */
+    transition: all .07s;
+
+
+
+    
+}
+
+.rockIMG {
+    background-image: url("images/rock.webp");
+}
+.paperIMG {
+    background-image: url("images/paper3.png");
+}
+.scissorsIMG {
+    background-image: url("images/scissors2.png");
+}
+.resetIMG {
+    background-image: url("images/reset.png");
+}
 
 
 
 
+/* messing around */
 
-/* #rock {
-    background:url("images/rock.webp")
-} */
+.selected {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
+
+
+
+#rock:hover,
+#paper:hover,
+#scissors:hover,
+.resetIMG:hover {  
+transform: scale(1.1);
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

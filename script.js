@@ -51,7 +51,7 @@ function game(e) {
     //     have computer run again here as well 
 
     if (computerChoice === userChoice) {
-        alert(`You've both selected ${computerChoice}, please pick again!`)
+        // alert(`You've both selected ${computerChoice}, please pick again!`)
 
 
 
@@ -62,7 +62,7 @@ function game(e) {
         computerChoice === `scissors` && userChoice === `paper` ||
         computerChoice === `paper` && userChoice === `rock`
     ) {
-        alert(`Sorry, ${computerChoice} beats ${userChoice}! Try again :)`)
+        // alert(`Sorry, ${computerChoice} beats ${userChoice}! Try again :)`)
         compScore += 1
         compScoreDisplay.textContent = compScore
 
@@ -71,7 +71,7 @@ function game(e) {
         userChoice === `scissors` && computerChoice === `paper` ||
         userChoice === `paper` && computerChoice === `rock`
     ) {
-        alert(`Nice, ${userChoice} beats ${computerChoice}! Go again!`)
+        // alert(`Nice, ${userChoice} beats ${computerChoice}! Go again!`)
         userScore += 1
         userScoreDisplay.textContent = userScore
 
