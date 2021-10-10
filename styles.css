@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 60px;
+}
+
+#reset-align {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.btn {
+    width: 80px;
+    height: 30px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.left-side,
+.right-side {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid green;
+    padding: 36px;
+    width: 400px;
+}
+
+
+.player-choices,
+.computer-choices {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 40px;
+}
