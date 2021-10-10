@@ -13,21 +13,23 @@
 <body>
     <h1>Welcome to my Rock, Paper, Scissors Game!</h1>
     <div id="reset-align">
-        <button class="btn">Reset</button>
+        <button id= "reset" class="btn">Reset</button>
     </div>
 
     <div class="main-container">
         <div class="left-side">
-            <h2>You</h2>
+            <h2 class="player-names">You</h2>
             <div class="player-choices">
                 <button id="rock" class="btn choices">Rock</button>
                 <button id="paper" class="btn choices">Paper</button>
                 <button id="scissors" class="btn choices">Scissors</button>
             </div>
-
+            <div>
+                <h2 id="player-score">0</h2>
+            </div>
         </div>
         <div class="right-side">
-            <h2>Computer</h2>
+            <h2 class="player-names">Computer</h2>
             <div class="computer-choices">
 
                 <button class="btn">Rock</button>
@@ -35,10 +37,12 @@
                 <button class="btn">Scissors</button>
 
             </div>
+            <div>
+                <h2 id="computer-score">0</h2>
+            </div>
         </div>
     </div>
 
-    <div>
-    </div>
+    
 </body>
 </html>

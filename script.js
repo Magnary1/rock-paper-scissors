@@ -16,13 +16,30 @@ console.log(computerChoice);
 const rock = document.getElementById(`rock`)
 const paper = document.getElementById(`paper`)
 const scissors = document.getElementById(`scissors`)
+const userScoreDisplay = document.getElementById(`player-score`)
+const compScoreDisplay = document.getElementById(`computer-score`)
+const reset = document.getElementById(`reset`)
 
+//messing around
+function resetGame() {
+    compScore = 0;
+    userScore = 0;
+    compScoreDisplay.textContent = 0;
+    userScoreDisplay.textContent = 0;
+}
+
+reset.addEventListener(`click`, resetGame)
+
+//messing
 
 rock.addEventListener(`click`, game)
 paper.addEventListener(`click`, game)
 scissors.addEventListener(`click`, game)
 
 
+
+let compScore = 0
+let userScore = 0
 
 function game(e) {
     let userChoice = e.target.id
@@ -31,32 +48,34 @@ function game(e) {
 
 
     // if computer choice === userchoice, ask to choose again
-//     have computer run again here as well 
+    //     have computer run again here as well 
 
-if (computerChoice === userChoice) {
-    alert(`You've both selected ${computerChoice}, please pick again!`)
-
-
+    if (computerChoice === userChoice) {
+        alert(`You've both selected ${computerChoice}, please pick again!`)
 
 
-// let user know if they lose and to try again
 
-    } else if   (computerChoice === `rock` && userChoice === `scissors` || 
-                computerChoice === `scissors` && userChoice === `paper` ||
-                computerChoice === `paper` && userChoice === `rock`
-                )
-                    {   alert(`Sorry, ${computerChoice} beats ${userChoice}! Try again :)`)
-                    
 
-// let user know if they win and to keep playing
-    } else if   (userChoice === `rock` && computerChoice === `scissors` || 
-                userChoice === `scissors` && computerChoice === `paper` ||
-                userChoice === `paper` && computerChoice === `rock`
-            )
-                {   alert(`Nice, ${userChoice} beats ${computerChoice}! Go again!`)
-                    
+        // let user know if they lose and to try again
 
-     }
+    } else if (computerChoice === `rock` && userChoice === `scissors` ||
+        computerChoice === `scissors` && userChoice === `paper` ||
+        computerChoice === `paper` && userChoice === `rock`
+    ) {
+        alert(`Sorry, ${computerChoice} beats ${userChoice}! Try again :)`)
+        compScore += 1
+        compScoreDisplay.textContent = compScore
+
+        // let user know if they win and to keep playing
+    } else if (userChoice === `rock` && computerChoice === `scissors` ||
+        userChoice === `scissors` && computerChoice === `paper` ||
+        userChoice === `paper` && computerChoice === `rock`
+    ) {
+        alert(`Nice, ${userChoice} beats ${computerChoice}! Go again!`)
+        userScore += 1
+        userScoreDisplay.textContent = userScore
+
+    }
 }
 
 
@@ -144,7 +163,7 @@ if (computerChoice === userChoice) {
 //                 computerChoice === `paper` && userChoice === `rock`
 //                 )
 //                     {   alert(`Sorry, ${computerChoice} beats ${userChoice}! Try again :)`)
-                    
+
 //                         computerChoice = computerPlay();
 //                         console.log(computerChoice);
 
@@ -153,8 +172,8 @@ if (computerChoice === userChoice) {
 
 
 
-                        
-                        
+
+
 
 // // let user know if they win and to keep playing
 //     } else if   (userChoice === `rock` && computerChoice === `scissors` || 
@@ -162,7 +181,7 @@ if (computerChoice === userChoice) {
 //                 userChoice === `paper` && computerChoice === `rock`
 //             )
 //                 {   alert(`Nice, ${userChoice} beats ${computerChoice}! Go again!`)
-                    
+
 //                     computerChoice = computerPlay();
 //                     console.log(computerChoice);
 
@@ -205,10 +224,10 @@ if (computerChoice === userChoice) {
 //                 computerChoice === `paper` && userChoice === `rock`
 //                 )
 //                     {   alert(`Sorry, ${computerChoice} beats ${userChoice}!`)
-                
 
-                        
-                        
+
+
+
 
 // // let user know if they win
 
@@ -217,7 +236,7 @@ if (computerChoice === userChoice) {
 //                 userChoice === `paper` && computerChoice === `rock`
 //             )
 //                 {   alert(`Nice, ${userChoice} beats ${computerChoice}!`)
-                    
+
 
 
 // // let user know if they don't choose rock, paper, or scissors
@@ -227,7 +246,7 @@ if (computerChoice === userChoice) {
 
 //      }
 
-     
+
 //      //final alert
 
 //     alert(`That was the end of the 5 rounds, did you win?`)

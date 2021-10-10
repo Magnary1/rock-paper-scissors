@@ -41,7 +41,21 @@ h1 {
     justify-content: space-around;
 }
 
-h2 {
+.player-names {
     text-align: center;
     padding-bottom: 40px;
 }
+#computer-score,
+#player-score {
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+
+
+
+
+/* #rock {
+    background:url("images/rock.webp")
+} */
