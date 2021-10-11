@@ -1,10 +1,6 @@
 # rock-paper-scissors
 
-Simple game.
-User now knows what the computer chose both on the screen and beforehand in console.
+Biggest issue is that there is a lot of text. Couldn't get the `array.forEach()` to work, so just did everything one by one.
 
-No looping.
-No buttons.
-Could add attempt numbers (ex: 1/5, 2/5...) somehow.
+Got the interface to look nicer. Could add colors, but not sure how to without making the page look worse.
 
--

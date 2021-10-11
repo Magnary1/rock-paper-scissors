@@ -7,9 +7,12 @@ function computerPlay() {
 }
 
 let computerChoice = computerPlay();
-console.log(computerChoice);
+console.log(`computer chose ${computerChoice}`);
 
 
+const rockComp = document.getElementById(`rockComp`)
+const paperComp = document.getElementById(`paperComp`)
+const scissorsComp = document.getElementById(`scissorsComp`)
 
 // computer stuff above ^^^^^^^^^^^
 
@@ -44,25 +47,18 @@ let userScore = 0
 function game(e) {
     let userChoice = e.target.id
     computerChoice = computerPlay();
-    console.log(computerChoice);
+    console.log(`computer chose ${computerChoice}`);
 
 
     // if computer choice === userchoice, ask to choose again
     //     have computer run again here as well 
 
     if (computerChoice === userChoice) {
-        // alert(`You've both selected ${computerChoice}, please pick again!`)
-
-
-
-
-        // let user know if they lose and to try again
 
     } else if (computerChoice === `rock` && userChoice === `scissors` ||
         computerChoice === `scissors` && userChoice === `paper` ||
         computerChoice === `paper` && userChoice === `rock`
     ) {
-        // alert(`Sorry, ${computerChoice} beats ${userChoice}! Try again :)`)
         compScore += 1
         compScoreDisplay.textContent = compScore
 
@@ -71,17 +67,55 @@ function game(e) {
         userChoice === `scissors` && computerChoice === `paper` ||
         userChoice === `paper` && computerChoice === `rock`
     ) {
-        // alert(`Nice, ${userChoice} beats ${computerChoice}! Go again!`)
         userScore += 1
         userScoreDisplay.textContent = userScore
 
     }
+
+    // trying something
+
+    
+
+
+    if (userChoice === `rock`) {
+        rock.classList.add(`selected`)
+    }
+    
+    if (computerChoice === `rock`) {
+        rockComp.classList.add(`selected`)
+    }
+
+    if (userChoice === `paper`) {
+        paper.classList.add(`selected`)
+    }
+    
+    if (computerChoice === `paper`) {
+        paperComp.classList.add(`selected`)
+    }
+    if (userChoice === `scissors`) {
+        scissors.classList.add(`selected`)
+    }
+    
+    if (computerChoice === `scissors`) {
+        scissorsComp.classList.add(`selected`)
+    }
+    rockComp.addEventListener(`transitionend`, removeTransition)
+    paperComp.addEventListener(`transitionend`, removeTransition)
+    scissorsComp.addEventListener(`transitionend`, removeTransition)
+    rock.addEventListener(`transitionend`, removeTransition)
+    paper.addEventListener(`transitionend`, removeTransition)
+    scissors.addEventListener(`transitionend`, removeTransition)
+
 }
 
 
 
 
-
+function removeTransition(e) {
+    if (e.propertyName !== `border-bottom-color`) return;
+    this.classList.remove(`selected`);
+    console.log(e)
+}
 
 
 
