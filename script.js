@@ -129,9 +129,9 @@ function game(e) {
     scissors.addEventListener(`transitionend`, removeTransition)
     
 
-    //messing
-    leftSide.addEventListener(`transitionend`, removeTransition)
-    rightSide.addEventListener(`transitionend`, removeTransition)
+    // //messing
+    leftSide.addEventListener(`transitionend`, removeBackgroundWin)
+    rightSide.addEventListener(`transitionend`, removeBackgroundWin)
 
 }
 
@@ -141,12 +141,14 @@ function game(e) {
 function removeTransition(e) {
     if (e.propertyName !== `border-bottom-color`) return;
     this.classList.remove(`selected`);
+   
+    // console.log(e)
+}
+
+function removeBackgroundWin(e) {
+    if (e.propertyName == `background-color`)
     this.classList.remove(`win`)
     this.classList.remove(`lose`)
     this.classList.remove(`tie`)
-    console.log(e)
-}
-
-function addBackgroundWin(e) {
-    console.log(e)
+    // console.log(e)
 }

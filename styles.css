@@ -31,6 +31,9 @@ box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.23);
     border-radius: 20%;
     padding: 36px;
     width: 400px;
+
+    transition-property: transform background;
+    transition-duration: 1.5s;
 }
 
 
@@ -108,13 +111,15 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
 .win {
     background: rgb(43, 148, 43);
-    transition: all 2s;
 }
 .lose {
     background:rgb(173, 4, 4);
-    transition: all 2s;
 }
 .tie {
     background: rgba(211, 211, 211, 0.801);
-    transition: all 2s;
 }
+
+
+/* .choices {
+    transition-property: transform border-color;
+} */
