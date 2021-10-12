@@ -106,3 +106,15 @@ transform: scale(1.1);
 box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.win {
+    background: rgb(43, 148, 43);
+    transition: all 2s;
+}
+.lose {
+    background:rgb(173, 4, 4);
+    transition: all 2s;
+}
+.tie {
+    background: rgba(211, 211, 211, 0.801);
+    transition: all 2s;
+}
