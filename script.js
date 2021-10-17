@@ -161,7 +161,7 @@ function game(e) {
 
 
 function removeTransition(e) {
-    if (e.propertyName !== `border-bottom-color`) return;
+    if (e.propertyName !== `transform`) return;
     this.classList.remove(`selected`);
    
     // console.log(e)
