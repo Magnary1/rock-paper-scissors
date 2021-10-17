@@ -28,6 +28,13 @@ function resetGame() {
     userScore = 0;
     compScoreDisplay.textContent = 0;
     userScoreDisplay.textContent = 0;
+    leftSide.classList.remove(`win`)
+        leftSide.classList.remove(`lose`)
+        rightSide.classList.remove(`win`)
+        rightSide.classList.remove(`lose`)
+        leftSide.classList.remove(`tie`)
+        rightSide.classList.remove(`tie`)
+
 }
 
 reset.addEventListener(`click`, resetGame)
@@ -57,13 +64,17 @@ let userScore = 0
 function game(e) {
     let userChoice = e.target.id;
     computerChoice = computerPlay();
-    console.log(`computer chose ${computerChoice}`);
+    // console.log(`computer chose ${computerChoice}`);
 
 
     // if computer choice === userchoice, ask to choose again
     //     have computer run again here as well 
 
     if (computerChoice === userChoice) {
+        leftSide.classList.remove(`win`)
+        leftSide.classList.remove(`lose`)
+        rightSide.classList.remove(`win`)
+        rightSide.classList.remove(`lose`)
         leftSide.classList.add(`tie`)
         rightSide.classList.add(`tie`)
 
@@ -72,7 +83,12 @@ function game(e) {
         computerChoice === `scissors` && userChoice === `paper` ||
         computerChoice === `paper` && userChoice === `rock`
     ) {
-        
+        leftSide.classList.remove(`tie`)
+        leftSide.classList.remove(`win`)
+        rightSide.classList.remove(`tie`)
+        rightSide.classList.remove(`lose`)
+
+
         compScore += 1
         compScoreDisplay.textContent = compScore
         leftSide.classList.add(`lose`)
@@ -87,8 +103,14 @@ function game(e) {
     ) {
         userScore += 1
         userScoreDisplay.textContent = userScore
+        leftSide.classList.remove(`tie`)
+        leftSide.classList.remove(`lose`)
+        rightSide.classList.remove(`tie`)
+        rightSide.classList.remove(`win`)
+
         leftSide.classList.add(`win`)
         rightSide.classList.add(`lose`)
+        
 
     }
 
@@ -128,12 +150,12 @@ function game(e) {
     paper.addEventListener(`transitionend`, removeTransition)
     scissors.addEventListener(`transitionend`, removeTransition)
     
-
-    // //messing
-    leftSide.addEventListener(`transitionend`, removeBackgroundWin)
-    rightSide.addEventListener(`transitionend`, removeBackgroundWin)
-
 }
+    // //messing
+//     leftSide.addEventListener(`transitionend`, removeBackgroundWin)
+//     rightSide.addEventListener(`transitionend`, removeBackgroundWin)
+
+// }
 
 
 
@@ -145,10 +167,15 @@ function removeTransition(e) {
     // console.log(e)
 }
 
-function removeBackgroundWin(e) {
-    if (e.propertyName == `background-color`)
-    this.classList.remove(`win`)
-    this.classList.remove(`lose`)
-    this.classList.remove(`tie`)
-    // console.log(e)
-}
+// function removeBackgroundWin(e) {
+//     if (e.propertyName == `background-color`)
+//     this.classList.remove(`win`)
+//     this.classList.remove(`lose`)
+//     this.classList.remove(`tie`)
+//     // console.log(e)
+// }
+
+
+// function removeBackground() {
+//     if ()
+// }
