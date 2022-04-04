@@ -1,7 +1,9 @@
 # rock-paper-scissors
 https://magnary1.github.io/rock-paper-scissors/
 
-Biggest issue is that there is a lot of text. Couldn't get the `array.forEach()` to work, so just did everything one by one.
+Standard layout
+![image](https://user-images.githubusercontent.com/90487153/161585959-a29558e6-5e73-4eb7-8227-031c2fafbbb3.png)
 
-Got the interface to look nicer. Could add colors, but not sure how to without making the page look worse.
 
+User wins match
+![image](https://user-images.githubusercontent.com/90487153/161586183-2f6af91a-02c0-4933-8ad3-8343d74f9378.png)
